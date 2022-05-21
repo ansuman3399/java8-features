@@ -10,4 +10,11 @@ public class Lambda {
 @FunctionalInterface
 interface Demo{
     public int stringLength(String str);
+
+    default void m2(){
+
+    }
+    static void m3(){
+
+    }
 }
