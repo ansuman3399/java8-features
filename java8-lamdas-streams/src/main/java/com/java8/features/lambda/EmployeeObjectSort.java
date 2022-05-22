@@ -12,8 +12,10 @@ public class EmployeeObjectSort {
         list.add(new Employee(2, "xyz"));
         list.add(new Employee(8, "Ansuman"));
 
-        Collections.sort(list, (e1, e2) -> (e1.getId()>e2.getId())?-1:e1.getId()<e2.getId()?1:0);
+//        Collections.sort(list, (e1, e2) -> (e1.getId()>e2.getId())?-1:e1.getId()<e2.getId()?1:0);
+        Collections.sort(list, (e1, e2) ->  e2.getName().compareTo(e1.getName()));
         System.out.println(list.toString());
+
     }
 }
 
