@@ -5,5 +5,11 @@ public class InnerClassLambda {
         Runnable r = ()-> System.out.println("Inner class lambda");
         Thread t = new Thread(r);
         t.start();
+
+        //passing inside the thread method
+        Thread thread = new Thread(()->{
+            System.out.println("Inside lambda inner class");
+        });
+        thread.start();
     }
 }
