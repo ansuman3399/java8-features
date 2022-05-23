@@ -13,3 +13,4 @@ public class InnerClassLambda {
         thread.start();
     }
 }
+
