@@ -2,7 +2,7 @@ package com.java8.features.methodconstructorreference;
 
 public class ConstructorReference {
 
-    ConstructorReference(){
+    ConstructorReference() {
         System.out.println("Constructor");
     }
 
@@ -12,6 +12,7 @@ public class ConstructorReference {
         System.out.println(constructorReference);
     }
 }
-interface In{
+
+interface In {
     ConstructorReference get();
 }
