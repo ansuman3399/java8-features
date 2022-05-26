@@ -6,9 +6,10 @@ public class MethodReference {
     }
 
     public static void main(String[] args) {
-        
+        Ref ref = MethodReference::m2;
+        ref.m1();
     }
 }
-interface ref{
+interface Ref{
     void m1();
 }
