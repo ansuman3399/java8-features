@@ -6,7 +6,7 @@ public class MethodReference {
     }
 
     public static void main(String[] args) {
-        3
+        
     }
 }
 interface ref{
