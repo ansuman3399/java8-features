@@ -10,6 +10,7 @@ public class Collect {
         List<String> collect = list.stream()
                 .map(str -> str.toLowerCase())
                 .collect(Collectors.toList());
+        System.out.println(list.stream().count());
         System.out.println(collect);
     }
 }
