@@ -9,6 +9,10 @@ public class InnerClasses {
             }
         };
         Thread t = new Thread(r);
+        Thread t2 = new Thread(()->{
+            System.out.println("anonymous inner class");
+        });
         t.start();
+        t2.start();
     }
 }
