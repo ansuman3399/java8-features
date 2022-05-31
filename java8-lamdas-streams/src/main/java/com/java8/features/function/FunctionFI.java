@@ -9,5 +9,7 @@ public class FunctionFI {
     public static void main(String[] args) {
         Function<String,Integer> function = s->s.length();
         System.out.println(function.apply("abc"));
+        Function<Integer,Integer> function1 = i->i*i;
+        System.out.println(function1.apply(4));
     }
 }
