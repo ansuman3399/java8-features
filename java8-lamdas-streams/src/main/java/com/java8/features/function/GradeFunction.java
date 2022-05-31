@@ -20,7 +20,9 @@ public class GradeFunction {
                 return "Fail";
         };
 
-        System.out.println(function.apply(new Student("Ansuman", 30)));
+        for (Student st:list) {
+            System.out.println(st.name+":"+function.apply(st));
+        }
     }
 
     public static void populate(ArrayList<Student> list) {
