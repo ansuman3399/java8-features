@@ -2,7 +2,7 @@ package com.java8.features.consumer;
 
 public class ConsumerChaining {
     public static void main(String[] args) {
-        
+
     }
 }
 class Movie{
