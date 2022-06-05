@@ -14,7 +14,11 @@ public class DistinctDemo {
         list.add(Arrays.asList("list1c", "list2c", "list3c"));
 
 //        Stream<String> distinct =
-        long count = list.stream().flatMap(List::stream).distinct().count();
+        long count = list.stream()
+                .peek(s -> System.out.println(s.stream().distinct().count()))
+                .flatMap(List::stream)
+                .distinct()
+                .count();
         System.out.println(count);
     }
 }
