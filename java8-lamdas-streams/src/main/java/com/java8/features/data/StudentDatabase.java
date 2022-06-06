@@ -9,6 +9,15 @@ public class StudentDatabase {
     String address;
     String phoneNo;
     String company;
+    int books;
+
+    public int getBooks() {
+        return books;
+    }
+
+    public void setBooks(int books) {
+        this.books = books;
+    }
 
     @Override
     public String toString() {
@@ -52,18 +61,19 @@ public class StudentDatabase {
         this.company = company;
     }
 
-    public StudentDatabase(String name, String address, String phoneNo, String company) {
+    public StudentDatabase(String name, String address, String phoneNo, String company , int books) {
         this.name = name;
         this.address = address;
         this.phoneNo = phoneNo;
         this.company = company;
+        this.books=books;
     }
 
     public static List<StudentDatabase> getAllStudents() {
         List<StudentDatabase> studentlist = new ArrayList<>();
-        studentlist.add(new StudentDatabase("a", "cut", "7873", "Del"));
-        studentlist.add(new StudentDatabase("b", "bbsr", "7008", "DelIn"));
-        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs"));
+        studentlist.add(new StudentDatabase("a", "cut", "7873", "Del",10));
+        studentlist.add(new StudentDatabase("b", "bbsr", "7008", "DelIn",20));
+        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs",30));
         return studentlist;
     }
 }
