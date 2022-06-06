@@ -9,7 +9,8 @@ public class StreamMapReduceDemo {
         List<StudentDatabase> allStudents = StudentDatabase.getAllStudents();
         Integer noOfBooks = allStudents.stream()
                 .map(StudentDatabase::getBooks)
-                .reduce(0, (a, b) -> a + b);
+                .filter(i->i>=20)
+                .reduce(0, Integer::sum);
         System.out.println(noOfBooks);
     }
 }
