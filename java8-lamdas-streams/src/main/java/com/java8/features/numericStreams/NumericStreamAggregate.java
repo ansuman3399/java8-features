@@ -16,3 +16,4 @@ public class NumericStreamAggregate {
         System.out.println(average.isPresent()?average.getAsDouble():null);
     }
 }
+
