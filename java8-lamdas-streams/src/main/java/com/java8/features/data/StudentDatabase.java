@@ -26,6 +26,7 @@ public class StudentDatabase {
                 ", address='" + address + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
                 ", company='" + company + '\'' +
+                ", books=" + books +
                 '}';
     }
 
