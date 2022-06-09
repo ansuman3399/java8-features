@@ -11,5 +11,6 @@ public class MapToObjDemo {
                 .mapToObj((i) -> new Integer(i))
                 .collect(Collectors.toList());
         System.out.println(collect);
+
     }
 }
