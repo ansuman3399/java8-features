@@ -1,4 +1,4 @@
-package com.java8.features.numericStreams;
+package com.java8.features.terminal;
 
 import com.java8.features.data.StudentDatabase;
 
