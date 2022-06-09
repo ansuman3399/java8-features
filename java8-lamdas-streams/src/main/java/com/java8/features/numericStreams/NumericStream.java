@@ -12,5 +12,8 @@ public class NumericStream {
 
         int sum1 = IntStream.rangeClosed(1, 9).sum();
         System.out.println(sum1);
+
+        IntStream.rangeClosed(1,50).forEach(System.out::println);
+        IntStream.range(1,50).forEach(System.out::println);
     }
 }
