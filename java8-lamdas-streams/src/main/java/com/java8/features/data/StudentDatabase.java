@@ -75,6 +75,7 @@ public class StudentDatabase {
         studentlist.add(new StudentDatabase("a", "cut", "7873", "Del",10));
         studentlist.add(new StudentDatabase("b", "bbsr", "7008", "DelIn",20));
         studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs",30));
+        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs",30));
         return studentlist;
     }
 }
