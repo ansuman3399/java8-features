@@ -1,17 +1,20 @@
 package com.java8.features.parallelstreams;
 
+import com.java8.features.data.StudentDatabase;
+
+import java.util.List;
 import java.util.function.Supplier;
-import java.util.stream.IntStream;
-//Fork join framework
-//no of thread is equal to  no of processors available
-public class ParallelStream {
+import java.util.stream.Collectors;
+
+public class ParallelStreamDemo {
     public static void main(String[] args) {
-        int sum = IntStream.rangeClosed(1, 50)
-                .parallel()
-//                .peek(value -> System.out.println(value))
-                .sum();
-        System.out.println(sum);
-        System.out.println(Runtime.getRuntime().availableProcessors());
+        List<String> companies = StudentDatabase.getAllStudents()
+                .stream()
+                .map(StudentDatabase::getCompany)
+                .distinct()
+                .sorted()
+                .collect(Collectors.toList());
+        System.out.println(companies);
     }
 
     static long checkPerformanceResult(Supplier<Integer> supplier, int noOfTimes) {
