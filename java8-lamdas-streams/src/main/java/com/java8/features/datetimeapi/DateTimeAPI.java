@@ -1,7 +1,6 @@
-package com.java8.features.DateTimeAPI;
+package com.java8.features.datetimeapi;
 
 import java.time.Year;
-import java.time.ZoneId;
 
 public class DateTimeAPI {
     public static void main(String[] args) {

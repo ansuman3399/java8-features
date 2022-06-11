@@ -1,6 +1,4 @@
-package com.java8.features.DateTimeAPI;
-
-import java.time.*;
+package com.java8.features.datetimeapi;
 
 public class ZoneId {
     public static void main(String[] args) {
