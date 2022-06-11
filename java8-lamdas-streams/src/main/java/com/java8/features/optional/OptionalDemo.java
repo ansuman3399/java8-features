@@ -12,6 +12,6 @@ public class OptionalDemo {
                 .stream()
                 .filter(studentDatabase -> studentDatabase.getBooks() > 10)
                 .collect(Collectors.toList()));
-        System.out.println(collect.isPresent()?collect.get():null);
+        System.out.println(collect.isPresent()?collect.get().stream().map(studentDatabase -> studentDatabase.getName()).collect(Collectors.toList()):null);
     }
 }
