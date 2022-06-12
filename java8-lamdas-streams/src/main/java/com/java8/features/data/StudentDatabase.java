@@ -2,6 +2,7 @@ package com.java8.features.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class StudentDatabase {
 
@@ -62,20 +63,24 @@ public class StudentDatabase {
         this.company = company;
     }
 
-    public StudentDatabase(String name, String address, String phoneNo, String company , int books) {
+    public StudentDatabase(String name, String address, String phoneNo, String company, int books) {
         this.name = name;
         this.address = address;
         this.phoneNo = phoneNo;
         this.company = company;
-        this.books=books;
+        this.books = books;
     }
 
     public static List<StudentDatabase> getAllStudents() {
         List<StudentDatabase> studentlist = new ArrayList<>();
-        studentlist.add(new StudentDatabase("a", "cut", "7873", "Del",10));
-        studentlist.add(new StudentDatabase("b", "bbsr", "7008", "DelIn",20));
-        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs",30));
-        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs",30));
+        studentlist.add(new StudentDatabase("a", "cut", "7873", "Del", 10));
+        studentlist.add(new StudentDatabase("b", "bbsr", "7008", "DelIn", 20));
+        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs", 30));
+        studentlist.add(new StudentDatabase("c", "bb", "1234", "DelUs", 30));
         return studentlist;
     }
+
+    public static Supplier<StudentDatabase> record = () -> {
+        return new StudentDatabase("c", "bb", "1234", "DelUs", 30);
+    };
 }
