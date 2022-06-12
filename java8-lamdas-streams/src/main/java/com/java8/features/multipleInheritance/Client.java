@@ -12,3 +12,4 @@ public class Client implements Interface1,Interface2,Interface3{
         client.methodC();
     }
 }
+ 
