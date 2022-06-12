@@ -9,5 +9,8 @@ public class OptionalOfEmptyNullable {
 
 //        Optional<Object> obj = Optional.of(null);
 //        System.out.println(obj.get());
+
+        Optional<Object> empty = Optional.empty();
+        System.out.println(empty);
     }
 }
