@@ -2,22 +2,24 @@ package com.java8.features.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class StudentDatabase {
 
-    String name;
-    String address;
-    String phoneNo;
-    String company;
-    int books;
+    private String name;
+    private String address;
+    private String phoneNo;
+    private String company;
+    private int books;
+    private Optional<Bike> bike = Optional.empty();
 
-    public int getBooks() {
-        return books;
+    public Optional<Bike> getBike() {
+        return bike;
     }
 
-    public void setBooks(int books) {
-        this.books = books;
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
     }
 
     @Override
@@ -28,7 +30,16 @@ public class StudentDatabase {
                 ", phoneNo='" + phoneNo + '\'' +
                 ", company='" + company + '\'' +
                 ", books=" + books +
+                ", bike=" + bike +
                 '}';
+    }
+
+    public int getBooks() {
+        return books;
+    }
+
+    public void setBooks(int books) {
+        this.books = books;
     }
 
     public String getName() {
@@ -81,6 +92,9 @@ public class StudentDatabase {
     }
 
     public static Supplier<StudentDatabase> record = () -> {
-        return new StudentDatabase("c", "bb", "1234", "DelUs", 30);
+        Bike bike = new Bike("RE","Meteor");
+        StudentDatabase student =  new StudentDatabase("c", "bb", "1234", "DelUs", 30 );
+        student.setBike(Optional.ofNullable(bike));
+        return student;
     };
 }
