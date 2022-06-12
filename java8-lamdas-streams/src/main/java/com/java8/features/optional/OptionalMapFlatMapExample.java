@@ -17,7 +17,6 @@ public class OptionalMapFlatMapExample {
                 .flatMap(StudentDatabase::getBike)
                 .map(Bike::getName)
                 .ifPresent(s -> System.out.println(s));
-//        System.out.println();
 
     }
 }
