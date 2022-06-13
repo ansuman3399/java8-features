@@ -52,5 +52,20 @@ public class GFG {
         ll.remove("Geeks");
 
         System.out.println("After the Object Removal " + ll);
+
+        LinkedList list = new LinkedList();
+
+        // adding  elements
+        list.add("Geeks");
+        list.add(4);
+        list.add("Geeks");
+        list.add("8");
+
+        // printing the list
+        System.out.println("The initial list is :" + list);
+
+        // peek at the head of the list
+        // Prints 1st element, "Geeks"
+        System.out.println("Head of the list : " + list.peek());    
     }
 }
