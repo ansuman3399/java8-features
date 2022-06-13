@@ -1,5 +1,7 @@
 package com.java8.features.test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 
 public class GFG {
@@ -88,5 +90,23 @@ public class GFG {
             System.out.println("The Upper element is : " + peeklist.peekFirst());
         else
             System.out.println("The Lower element is : " + peeklist.peekLast());
+
+        long millis = System.currentTimeMillis();
+
+        // creating sql date object
+        java.sql.Date sqlDate = new java.sql.Date(millis);
+
+        // creating util date object by passing gettime()
+        // method of sql date class
+        java.util.Date utilDate = new java.util.Date(sqlDate.getTime());
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        // converting the util date into string format
+        final String stringDate = dateFormat.format(utilDate);
+
+        // printing both dates
+        System.out.println("utilDate:" + stringDate);
+        System.out.println("sqlDate:" + sqlDate);
     }
 }
