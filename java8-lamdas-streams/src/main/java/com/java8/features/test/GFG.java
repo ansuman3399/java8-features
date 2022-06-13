@@ -1,8 +1,12 @@
 package com.java8.features.test;
 
+import com.java8.features.function.Student;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.LinkedList;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class GFG {
 
@@ -108,5 +112,21 @@ public class GFG {
         // printing both dates
         System.out.println("utilDate:" + stringDate);
         System.out.println("sqlDate:" + sqlDate);
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Inside Runnable 1");
+            }
+        };
+
+        Runnable runnableLambda = () -> {
+            System.out.println("Inside Runnable 2");
+        };
+
+        Function<String, String> toUpperCaseMethodRefernce =
+                String::toUpperCase;
+
+        Predicate<String> predicateUsingLambda = (s) -> s.length()>=3;
     }
 }
