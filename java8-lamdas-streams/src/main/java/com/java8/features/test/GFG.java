@@ -5,8 +5,7 @@ import java.util.LinkedList;
 public class GFG {
 
     // Main driver method
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         // Creating object of the
         // class linked list
         LinkedList<String> ll = new LinkedList<String>();
@@ -38,5 +37,20 @@ public class GFG {
         l1.set(1, "For");
 
         System.out.println("Updated LinkedList " + l1);
+
+
+        ll.add("Geeks");
+        ll.add("Geeks");
+        ll.add(1, "For");
+
+        System.out.println("Initial LinkedList " + ll);
+
+        ll.remove(1);
+
+        System.out.println("After the Index Removal " + ll);
+
+        ll.remove("Geeks");
+
+        System.out.println("After the Object Removal " + ll);
     }
 }
