@@ -66,6 +66,27 @@ public class GFG {
 
         // peek at the head of the list
         // Prints 1st element, "Geeks"
-        System.out.println("Head of the list : " + list.peek());    
+        System.out.println("Head of the list : " + list.peek());
+
+        LinkedList peeklist = new LinkedList();
+
+        // adding  elements in deck
+        peeklist.add(5);
+        peeklist.add(4);
+        peeklist.add("Jack");
+        peeklist.add(8);
+        peeklist.add("King");
+
+        // printing the list
+        System.out.println("The initial deck is :" + peeklist);
+
+        String d = "upper";
+
+        System.out.println("The element chosen to peek is : " + d);
+
+        if (d == "upper")
+            System.out.println("The Upper element is : " + peeklist.peekFirst());
+        else
+            System.out.println("The Lower element is : " + peeklist.peekLast());
     }
 }
